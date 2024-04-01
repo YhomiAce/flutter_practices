@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   go_router: ^13.2.2
   modular_ui: ^0.0.5
+  gallery_picker: ^0.5.1
 
 dev_dependencies:
   flutter_test:

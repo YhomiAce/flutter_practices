@@ -1,4 +1,5 @@
 import 'package:boxed_app/models/user.dart';
+import 'package:boxed_app/pages/gallery/gallery.dart';
 import 'package:boxed_app/pages/go_router/home.dart';
 import 'package:boxed_app/pages/go_router/login.dart';
 import 'package:boxed_app/pages/go_router/pricing.dart';
@@ -24,6 +25,11 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       routerConfig: _router,
+      builder: (context, child) {
+        return Flexible(
+          child: child!,
+        );
+      },
     );
   }
 }
@@ -57,5 +63,10 @@ final GoRouter _router = GoRouter(
         return PricingPage(amount: amount);
       },
     ),
+    GoRoute(
+      path: "/gallery",
+      name: "/gallery",
+      builder: (context, state) => const Gallery(),
+    )
   ],
 );

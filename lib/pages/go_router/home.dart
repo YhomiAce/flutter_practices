@@ -1,4 +1,5 @@
 import 'package:boxed_app/models/user.dart';
+import 'package:boxed_app/widgets/side_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -12,6 +13,7 @@ class GoHomePage extends StatelessWidget {
         centerTitle: true,
         title: const Text("Home Page"),
       ),
+      drawer: const SideBarDrawer(),
       body: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
